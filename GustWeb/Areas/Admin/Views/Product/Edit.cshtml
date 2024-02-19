@@ -10,6 +10,7 @@
 
         <div asp-validation-summary="All"></div>
 
+        @* TITLE *@
         <div class="mb-3 row p-1">
             <label asp-for="Title" class="p-0"></label>
             <input asp-for="Title" type="text" class="form-control" />
@@ -17,15 +18,23 @@
 
         </div>
 
-
-
+        @* DESCRIPTION *@
         <div class="mb-3 row p-1">
-            <label asp-for="Description" class="p-0"></label>
+            <textarea asp-for="Description" class="p-0"></textarea>
             <input asp-for="Description" type="text" class="form-control" />
             <span asp-validation-for="Description" class="text-danger"></span>
 
         </div>
 
+        @* ISBN *@
+        <div class="mb-3 row p-1">
+            <label asp-for="ISBN" class="p-0"></label>
+            <input asp-for="ISBN" type="text" class="form-control" />
+            <span asp-validation-for="ISBN" class="text-danger"></span>
+
+        </div>
+
+        @* AUTHOR *@
         <div class="mb-3 row p-1">
             <label asp-for="Author" class="p-0"></label>
             <input asp-for="Author" type="text" class="form-control" />
@@ -33,10 +42,35 @@
 
         </div>
 
+        @* LISTPRICE *@
         <div class="mb-3 row p-1">
             <label asp-for="ListPrice" class="p-0"></label>
             <input asp-for="ListPrice" type="text" class="form-control" />
             <span asp-validation-for="ListPrice" class="text-danger"></span>
+
+        </div>
+
+        @* PRICE *@
+        <div class="mb-3 row p-1">
+            <label asp-for="Price" class="p-0"></label>
+            <input asp-for="Price" type="text" class="form-control" />
+            <span asp-validation-for="Price" class="text-danger"></span>
+
+        </div>
+
+        @* PRICE 50 *@
+        <div class="mb-3 row p-1">
+            <label asp-for="Price50" class="p-0"></label>
+            <input asp-for="Price50" type="text" class="form-control" />
+            <span asp-validation-for="Price50" class="text-danger"></span>
+
+        </div>
+
+        @* PRICE 100 *@
+        <div class="mb-3 row p-1">
+            <label asp-for="Price100" class="p-0"></label>
+            <input asp-for="Price100" type="text" class="form-control" />
+            <span asp-validation-for="Price100" class="text-danger"></span>
 
         </div>
 
