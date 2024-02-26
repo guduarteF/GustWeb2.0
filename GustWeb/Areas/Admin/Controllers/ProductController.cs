@@ -194,10 +194,9 @@ namespace GustWeb.Areas.Admin.Controllers
         {
             List<Product> objProductList = _unitOfWork.Product.GetAll(includeProperties: "Category").ToList();
             return Json(new { data = objProductList });
-            #endregion
-
         }
+        #endregion
     }
 
-  
+
 }
