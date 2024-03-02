@@ -3,12 +3,13 @@ using GustWeb.DataAcess.Data;
 using Gustf.Models;
 using Gustf.DataAcess.Repository.IRepository;
 using Gustf.DataAcess.Repository;
-
+using Microsoft.AspNetCore.Authorization;
+using Gustf.Utility;
 
 namespace GustWeb.Areas.Admin.Controllers
 {
     [Area("Admin")]
-
+    //[Authorize(Roles = SD.Role_Admin)]
     public class CategoryController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;

@@ -5,12 +5,14 @@ using Gustf.DataAcess.Repository.IRepository;
 using Gustf.DataAcess.Repository;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Gustf.Models.ViewModels;
+using Gustf.Utility;
+using Microsoft.AspNetCore.Authorization;
 
 
 namespace GustWeb.Areas.Admin.Controllers
 {
     [Area("Admin")]
-
+    [Authorize(Roles = SD.Role_Admin)]
     public class ProductController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;

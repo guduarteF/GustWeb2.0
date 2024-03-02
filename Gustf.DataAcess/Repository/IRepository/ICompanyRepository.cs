@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Gustf.DataAcess.Repository.IRepository
 {
-    public interface ICompanyRepository : IRepository<Company>
+    public interface ICategoryRepository : IRepository<Category>
     {
-        void Update(Company obj);
+        void Update(Category obj);
 
 
     }
