@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using Gustf.DataAcess.Repository.IRepository;
 using GustWeb.DataAcess.Data;
 using Microsoft.EntityFrameworkCore;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
+using System.Linq.Expressions;
 
 namespace Gustf.DataAcess.Repository
 {
@@ -27,9 +29,21 @@ namespace Gustf.DataAcess.Repository
         {
             _db.Add(entity);   
         }
-        public T Get(System.Linq.Expressions.Expression<Func<T, bool>> filter, string? includeProperties = null)
+        public T Get(Expression<Func<T, bool>> filter, string? includeProperties = null, bool tracked = false)
         {
-            IQueryable<T> query = dbSet;
+            IQueryable<T> query;
+            if (tracked)
+            {
+                query = dbSet;
+               
+            }
+            else
+            {
+                query = dbSet.AsNoTracking();
+                
+                
+            }
+
             query = query.Where(filter);
             if (!string.IsNullOrEmpty(includeProperties))
             {
@@ -40,12 +54,19 @@ namespace Gustf.DataAcess.Repository
                 }
             }
             return query.FirstOrDefault();
+
         }
 
         //Category, CoverType
-        public IEnumerable<T> GetAll(string? includeProperties = null)
+        public IEnumerable<T> GetAll(Expression<Func<T, bool>>? filter, string? includeProperties = null)
         {
             IQueryable<T> query = dbSet;
+
+            if(filter != null)
+            {
+                query = query.Where(filter);
+            }
+            
             if (!string.IsNullOrEmpty(includeProperties))
             {
                 foreach(var includeProp in includeProperties
