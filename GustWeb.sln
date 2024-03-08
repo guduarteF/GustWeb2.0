@@ -5,11 +5,11 @@ VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GustWeb", "GustWeb\GustWeb.csproj", "{2DDA8271-DC82-4C43-B9E8-C68EB2CEB7D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gustf.DataAcess", "Gustf.DataAcess\Gustf.DataAcess.csproj", "{052349F9-6FE0-4855-A638-A042E7117717}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gustf.DataAcess", "Gustf.DataAcess\Gustf.DataAcess.csproj", "{052349F9-6FE0-4855-A638-A042E7117717}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gustf.Models", "Gustf.Models\Gustf.Models.csproj", "{EA90D335-2CA8-464D-A81A-A7A006FA2860}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gustf.Models", "Gustf.Models\Gustf.Models.csproj", "{EA90D335-2CA8-464D-A81A-A7A006FA2860}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gustf.Utility", "Gustf.Utility\Gustf.Utility.csproj", "{E78DD687-E477-45C1-89F8-2A237D4FD584}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gustf.Utility", "Gustf.Utility\Gustf.Utility.csproj", "{E78DD687-E477-45C1-89F8-2A237D4FD584}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
